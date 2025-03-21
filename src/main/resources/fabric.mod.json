@@ -15,27 +15,19 @@
 	"icon": "assets/queue-2b2t/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": [
-			"com.notcharrow.queue2b2t.Queue2b2t"
-		],
 		"client": [
-			"com.notcharrow.queue2b2t.Queue2b2tClient"
+			"com.notcharrow.queue2b2t.QueueScheduler"
+		],
+		"modmenu": [
+			"com.notcharrow.queue2b2t.config.ModMenu"
 		]
 	},
-	"mixins": [
-		"queue-2b2t.mixins.json",
-		{
-			"config": "queue-2b2t.client.mixins.json",
-			"environment": "client"
-		}
-	],
 	"depends": {
 		"fabricloader": ">=0.16.10",
 		"minecraft": "~1.21.4",
 		"java": ">=21",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
+		"fabric-api": "*",
+		"modmenu": "*",
+		"cloth-config": "*"
 	}
 }
