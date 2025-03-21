@@ -1,7 +1,7 @@
 # 2b2t Queue Scheduler
 A simple fabric 1.21.4 mod to join the 2b2t queue at a set time of day, so that you're at the front when you're ready to play.
 
-[Modrinth Download](https://modrinth.com/project/2b2t-queue-scheduler/)
+[Modrinth Download](https://modrinth.com/mod/2b2t-queue-scheduler/)
 
 # Usage Guide
 
