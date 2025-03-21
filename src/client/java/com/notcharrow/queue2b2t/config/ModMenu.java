@@ -31,6 +31,16 @@ public class ModMenu implements ModMenuApi {
 				newValue -> ConfigManager.config.queueMinute = (Integer) newValue,
 				parent, 0, 59);
 
+		addConfigEntryBoolean(general, "Afk Leave", "If you should disconnect from 2b2t after getting to the end of the queue if " +
+						"the setting below is true", ConfigManager.config.afkKick,
+				newValue -> ConfigManager.config.afkKick = (Boolean) newValue,
+				parent);
+
+		addConfigEntryBoolean(general, "Afk", "Automatically toggles on when joining the queue. Toggle off " +
+						"before reaching the end of the queue if the above setting is enabled", ConfigManager.config.afk,
+				newValue -> ConfigManager.config.afk = (Boolean) newValue,
+				parent);
+
 		return builder.build();
 	}
 
