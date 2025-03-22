@@ -19,7 +19,7 @@ import java.util.Map;
 
 public class QueueScheduler implements ClientModInitializer {
 	private static final MinecraftClient client = MinecraftClient.getInstance();
-	private static final String SERVER_ADDRESS = "localhost";//"2b2t.org";
+	private static final String SERVER_ADDRESS = "2b2t.org";
 	private static LocalTime JOIN_TIME;
 
 	@Override
@@ -45,7 +45,7 @@ public class QueueScheduler implements ClientModInitializer {
 					join2b2t();
 				}
 				try {
-					Thread.sleep(1000);
+					Thread.sleep(5000);
 				} catch (InterruptedException ignored) {
 				}
 			}
@@ -67,7 +67,7 @@ public class QueueScheduler implements ClientModInitializer {
 
 			ClientTickEvents.END_CLIENT_TICK.register(client -> {
 				if (client.player != null && client.world != null
-						&& !client.player.isInCreativeMode()
+						&& client.player.getLastDeathPos().isPresent()
 						&& ConfigManager.config.afk && ConfigManager.config.afkKick) {
 					client.world.disconnect();
 				}
