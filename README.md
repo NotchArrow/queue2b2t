@@ -1,18 +1,35 @@
-# 2b2t Queue Scheduler
-A simple fabric 1.21.4 mod to join the 2b2t queue at a set time of day, so that you're at the front when you're ready to play.
+# 🎯 2b2t Queue Scheduler  
+*A Fabric 1.21.4 mod to join the 2b2t queue at a set time, ensuring you're at the front when you're ready to play.*  
 
 [Modrinth Download](https://modrinth.com/mod/2b2t-queue-scheduler/)
+---
 
-# Usage Guide
+## ⚙️ Dependencies  
+Make sure you have the following installed:  
+- [Fabric API](https://modrinth.com/mod/fabric-api)  
+- [ModMenu](https://modrinth.com/mod/modmenu)  
+- [Cloth Config API](https://modrinth.com/mod/cloth-config)  
 
-Dependencies:
-- FabricAPI
-- ModMenu
-- ClothConfigAPI
+---
 
-Using the mod:
-1. Open Minecraft and set the queue join time in ModMenu.
-2. Turn **autoreconnect ON** (requires an external mod).
-3. Leave Minecraft open and the mod will join the queue at the specified time of day.
-4. If you have the afk-leave setting enabled, you will need to go into ModMenu and set **AFK** to **NO** before you reach the end of the queue, or the mod will disconnect.
-> If you do not have the afk-leave setting enabled, you will need **antiafk ON** (requires an external mod) to avoid the 2b2t afk kick or you will be disconnected from the server after a few minutes.
+## 📖 Usage Guide  
+
+### 🚀 Setting Up  
+1. **Open Minecraft** and configure the queue join time in **ModMenu**.  
+2. **Enable Auto-Reconnect** (requires an external mod).  
+3. **Leave Minecraft open**—the mod will automatically join the queue at the specified time.  
+4. If **AFK-Leave** is enabled, you *must* go into **ModMenu** and set **AFK → NO** before reaching the front of the queue, or you’ll be disconnected.  
+
+> **Alternative:** If AFK-Leave is **disabled**, you'll need an **Anti-AFK mod** to avoid the **2b2t AFK kick**, or you'll be disconnected after a few minutes.  
+
+---
+
+## 📝 Notes  
+This is a small project for myself and a few friends, but if you find it useful, feel free to:  
+💡 Submit **Suggestions** | 🐞 Report **Bugs** | 💬 Just say **thanks**  
+
+Join my **[Discord](https://discord.gg/ZCaGkZeb4C)**!  
+It’s mainly for my larger project, **[NotchArrowUtils](https://modrinth.com/mod/notcharrowutils)**  
+> _(Which you should totally check out too...)_  
+
+However, feedback is always appreciated! 🚀  
