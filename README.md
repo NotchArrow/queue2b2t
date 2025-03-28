@@ -1,7 +1,11 @@
 # 🎯 2b2t Queue Scheduler  
 *A Fabric 1.21.4 mod to join the 2b2t queue at a set time, ensuring you're at the front when you're ready to play.*  
 
-[Modrinth Download](https://modrinth.com/mod/2b2t-queue-scheduler/)
+
+## [Modrinth Download](https://modrinth.com/mod/2b2t-queue-scheduler/)
+
+![image](https://sloc.xyz/github/NotchArrow/queue2b2t/?category=lines)
+![image](https://img.shields.io/modrinth/dt/2b2t-queue-scheduler?style=plastic&logo=modrinth&label=Modrinth&link=https%3A%2F%2Fmodrinth.com%2Fmodpack%2F2b2t-queue-scheduler)
 ---
 
 ## ⚙️ Dependencies  
