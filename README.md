@@ -1,4 +1,4 @@
-# 🎯 2b2t Queue Scheduler  
+![2b2tqueue_mod_icon](https://github.com/user-attachments/assets/7ed9fe95-3169-4c29-9792-289a97a425e0)
 *A Fabric 1.21.4 mod to join the 2b2t queue at a set time, ensuring you're at the front when you're ready to play.*  
 
 
