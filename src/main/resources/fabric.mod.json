@@ -3,7 +3,7 @@
 	"id": "queue-2b2t",
 	"version": "${version}",
 	"name": "2b2t Queue Scheduler",
-	"description": "A simple fabric 1.21.4 mod to join the 2b2t queue at a set time of day, so that you're at the front when you're ready to play.",
+	"description": "A simple fabric mod to join the 2b2t queue at a set time of day, so that you're at the front when you're ready to play.",
 	"authors": [
 		"NotchArrow"
 	],
