@@ -21,7 +21,7 @@ Make sure you have the following installed:
 ### 🚀 Setting Up  
 1. **Open Minecraft** and configure the queue join time in **ModMenu**.  
 2. **Enable Auto-Reconnect** (requires an external mod).  
-3. **Leave Minecraft open**—the mod will automatically join the queue at the specified time.  
+3. **Leave Minecraft open ON THE TITLE SCREEN**—the mod will automatically join the queue at the specified time.  
 4. If **AFK-Leave** is enabled, you *must* go into **ModMenu** and set **AFK → NO** before reaching the front of the queue, or you’ll be disconnected.  
 
 > **Alternative:** If AFK-Leave is **disabled**, you'll need an **Anti-AFK mod** to avoid the **2b2t AFK kick**, or you'll be disconnected after a few minutes.  
