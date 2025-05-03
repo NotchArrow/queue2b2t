@@ -1,6 +1,5 @@
 package com.notcharrow.queue2b2t;
 
-import com.notcharrow.queue2b2t.config.QueueConfig;
 import com.notcharrow.queue2b2t.config.ConfigManager;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
