@@ -4,6 +4,7 @@ import com.notcharrow.queue2b2t.config.ConfigManager;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.TitleScreen;
 import net.minecraft.client.gui.screen.multiplayer.ConnectScreen;
 import net.minecraft.client.gui.screen.multiplayer.MultiplayerScreen;
@@ -18,7 +19,6 @@ import java.util.Map;
 
 public class QueueScheduler implements ClientModInitializer {
 	private static final MinecraftClient client = MinecraftClient.getInstance();
-	private static final String SERVER_ADDRESS = "2b2t.org";
 	private static LocalTime JOIN_TIME;
 
 	@Override
@@ -52,14 +52,25 @@ public class QueueScheduler implements ClientModInitializer {
 	}
 
 	private void join2b2t () {
-		if (client.currentScreen instanceof TitleScreen) {
-			ServerInfo serverInfo = new ServerInfo("2b2t", SERVER_ADDRESS, ServerInfo.ServerType.OTHER);
-			ServerAddress serverAddress = ServerAddress.parse(SERVER_ADDRESS);
-			Map<Identifier, byte[]> cookieMap = new HashMap<>();
-			client.execute(() ->
-					ConnectScreen.connect(new MultiplayerScreen(null),
-					client, serverAddress, serverInfo, true, new CookieStorage(cookieMap))
-			);
+		if (client.isFinishedLoading() && client.world == null) {
+			String serverString = ConfigManager.config.serverString;
+			ServerInfo serverInfo = new ServerInfo("Server", serverString, ServerInfo.ServerType.OTHER);
+			ServerAddress serverAddress = ServerAddress.parse(serverString);
+			client.execute(() -> {
+				Screen joinScreen = new MultiplayerScreen(new TitleScreen());
+				client.setScreen(joinScreen);
+
+				client.execute(() -> {
+					ConnectScreen.connect(
+							joinScreen,
+							client,
+							serverAddress,
+							serverInfo,
+							false,
+							null
+					);
+				});
+			});
 
 			ConfigManager.config.afk = true;
 			ConfigManager.saveConfig();

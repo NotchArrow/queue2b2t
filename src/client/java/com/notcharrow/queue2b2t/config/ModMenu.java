@@ -41,6 +41,10 @@ public class ModMenu implements ModMenuApi {
 				newValue -> ConfigManager.config.afk = (Boolean) newValue,
 				parent);
 
+		addConfigEntryString(general, "Server IP", "Set the server IP address for the connection", ConfigManager.config.serverString,
+				newValue -> ConfigManager.config.serverString = (String) newValue,
+				parent);
+
 		return builder.build();
 	}
 
@@ -74,5 +78,21 @@ public class ModMenu implements ModMenuApi {
 			ConfigManager.saveConfig();
 			})
 			.build());
+	}
+
+	private void addConfigEntryString(ConfigCategory category, String label, String tooltip, Object value, Consumer<Object> saveConsumer, Screen parent) {
+		ConfigBuilder builder = ConfigBuilder.create()
+				.setParentScreen(parent)
+				.setTitle(Text.of("Queue 2b2t Configuration"));
+		ConfigEntryBuilder entryBuilder = builder.entryBuilder();
+
+		category.addEntry(entryBuilder.startStrField(Text.of(label), (String) value)
+				.setTooltip(Text.of(tooltip))
+				.setDefaultValue((String) value)
+				.setSaveConsumer(newValue -> {
+					saveConsumer.accept(newValue);
+					ConfigManager.saveConfig();
+				})
+				.build());
 	}
 }

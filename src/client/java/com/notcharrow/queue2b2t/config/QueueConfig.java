@@ -5,4 +5,5 @@ public class QueueConfig {
 	public int queueMinute = 15;
 	public boolean afkKick = false;
 	public boolean afk = false;
+	public String serverString = "2b2t.org";
 }
